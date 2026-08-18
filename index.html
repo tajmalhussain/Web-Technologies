@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>World Wide Web Fundamentals</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,sans-serif;background:#f4f7fb;color:#172033;line-height:1.6}
+header{background:linear-gradient(135deg,#123c69,#1d70a2);color:white;text-align:center;padding:42px 20px}
+header h1{margin:0 0 8px;font-size:38px}
+.container{max-width:1100px;margin:auto;padding:28px 18px}
+section{background:white;margin:20px 0;padding:25px;border-radius:16px;box-shadow:0 5px 18px #0001}
+h2{color:#155d8a;margin-top:0}
+.diagram{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:12px;margin:20px 0}
+.node{padding:14px 20px;border-radius:12px;background:#e8f3fb;border:2px solid #4a98c4;font-weight:bold;text-align:center}
+.arrow{font-size:26px;color:#155d8a}
+.url{background:#f7f1df;border-left:5px solid #d59b19;padding:16px;overflow:auto}
+table{width:100%;border-collapse:collapse;margin-top:15px}
+th,td{border:1px solid #ccd6df;padding:12px;text-align:left}
+th{background:#e8f3fb}
+.browser{border:2px solid #9aa9b7;border-radius:12px;overflow:hidden}
+.browser .bar{background:#e8edf2;padding:8px}
+.browser .screen{padding:20px;background:#fff}
+.badge{display:inline-block;background:#155d8a;color:white;padding:5px 10px;border-radius:20px;margin:3px}
+footer{text-align:center;padding:20px;color:#667}
+@media(max-width:650px){header h1{font-size:28px}.diagram{flex-direction:column}.arrow{transform:rotate(90deg)}}
+</style>
+</head>
+<body>
+<header>
+<h1>World Wide Web Fundamentals</h1>
+<p>Basic concepts required before developing an educational institution website</p>
+</header>
+<main class="container">
+<section>
+<h2>1. Internet Overview</h2>
+<p>The Internet is a global network of interconnected computer networks. It allows computers and devices to communicate using standard protocols such as TCP/IP.</p>
+<div class="diagram">
+<div class="node">Student Device</div><div class="arrow">↔</div>
+<div class="node">Internet / Network</div><div class="arrow">↔</div>
+<div class="node">Web Server</div>
+</div>
+</section>
+
+<section>
+<h2>2. Fundamental Computer Network Concepts</h2>
+<p>A computer network connects devices so that they can exchange data and share resources.</p>
+<div>
+<span class="badge">IP Address</span><span class="badge">TCP/IP</span>
+<span class="badge">DNS</span><span class="badge">HTTP/HTTPS</span><span class="badge">Router</span>
+</div>
+<ul>
+<li><b>IP Address:</b> Identifies a device on a network.</li>
+<li><b>Protocol:</b> A set of communication rules.</li>
+<li><b>DNS:</b> Converts domain names into IP addresses.</li>
+<li><b>HTTP/HTTPS:</b> Protocols used to transfer web resources.</li>
+<li><b>Router:</b> Forwards packets between networks.</li>
+</ul>
+</section>
+
+<section>
+<h2>3. URL and Its Structure</h2>
+<p>A URL (Uniform Resource Locator) identifies the location of a resource on the web.</p>
+<div class="url"><b>https://www.example.edu/admission/index.html?year=2026</b></div>
+<ul>
+<li><b>https</b> – protocol/scheme</li>
+<li><b>www.example.edu</b> – domain/host</li>
+<li><b>/admission/index.html</b> – path and resource</li>
+<li><b>?year=2026</b> – query parameter</li>
+</ul>
+</section>
+
+<section>
+<h2>4. Domain Name</h2>
+<p>A domain name is a human-readable address used to access a website. DNS translates it into the corresponding IP address.</p>
+<div class="diagram">
+<div class="node">example.edu</div><div class="arrow">→</div>
+<div class="node">DNS</div><div class="arrow">→</div>
+<div class="node">192.0.2.10</div>
+</div>
+</section>
+
+<section>
+<h2>5. Web Browsers and Web Servers</h2>
+<div class="diagram">
+<div class="browser" style="width:300px">
+<div class="bar">🌐 Browser</div>
+<div class="screen">Requests a webpage<br>Renders HTML + CSS + JavaScript</div>
+</div>
+<div class="arrow">↔</div>
+<div class="browser" style="width:300px">
+<div class="bar">🖥️ Web Server</div>
+<div class="screen">Receives request<br>Sends requested resources</div>
+</div>
+</div>
+</section>
+
+<section>
+<h2>6. Working Principle of a Website</h2>
+<ol>
+<li>User enters a URL in a browser.</li>
+<li>DNS finds the server's IP address.</li>
+<li>The browser sends an HTTP/HTTPS request.</li>
+<li>The web server processes the request.</li>
+<li>The server sends HTML, CSS, JavaScript and other resources.</li>
+<li>The browser renders the webpage for the user.</li>
+</ol>
+<div class="diagram">
+<div class="node">Browser</div><div class="arrow">→</div><div class="node">DNS</div>
+<div class="arrow">→</div><div class="node">Server</div><div class="arrow">→</div><div class="node">Web Page</div>
+</div>
+</section>
+
+<section>
+<h2>7. Client-side vs Server-side Scripting</h2>
+<table>
+<tr><th>Client-side</th><th>Server-side</th></tr>
+<tr><td>Runs mainly in the user's browser.</td><td>Runs on the web server.</td></tr>
+<tr><td>Common technology: JavaScript.</td><td>Examples: PHP, Python, Java, Node.js.</td></tr>
+<tr><td>Used for UI interaction and validation.</td><td>Used for databases, authentication and business logic.</td></tr>
+<tr><td>Code can be delivered to the browser.</td><td>Server code remains on the server.</td></tr>
+</table>
+</section>
+</main>
+<footer>World Wide Web Fundamentals • HTML Demonstration</footer>
+</body>
+</html>
