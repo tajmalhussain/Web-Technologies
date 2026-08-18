@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Student Admission Form</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,sans-serif;background:#eef4f8;color:#1d2935}
+header{background:#123c69;color:#fff;text-align:center;padding:20px}
+header img{max-width:700px;width:90%;height:auto;border-radius:15px}
+.form-card{max-width:1050px;margin:25px auto;background:#fff;padding:30px;border-radius:18px;box-shadow:0 8px 25px #0002}
+fieldset{border:2px solid #cbd8e2;border-radius:14px;padding:20px;margin-bottom:22px}
+legend{font-weight:bold;color:#155d8a;padding:0 8px}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+label{font-weight:600;display:block;margin-bottom:6px}
+input,select,textarea{width:100%;padding:11px;border:1px solid #b9c7d2;border-radius:8px;font-size:15px}
+input:focus,select:focus,textarea:focus{outline:3px solid #d7ecfb;border-color:#287fb2}
+.inline{display:flex;gap:15px;flex-wrap:wrap}
+.inline label{font-weight:normal}
+.media{display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:center}
+.media img{width:100%;border-radius:12px;border:1px solid #ccd}
+button{background:#155d8a;color:#fff;border:0;padding:13px 24px;border-radius:9px;font-size:16px;cursor:pointer}
+button:hover{background:#0e466b}
+.note{background:#eef8ff;padding:12px;border-left:4px solid #287fb2;border-radius:5px}
+@media(max-width:700px){.grid,.media{grid-template-columns:1fr}.form-card{margin:12px;padding:18px}}
+</style>
+</head>
+<body>
+<header>
+<img src="assets/campus-logo.svg" alt="CampusConnect Student Admission Portal">
+</header>
+
+<main class="form-card">
+<h1>Student Admission Form</h1>
+<p class="note">Please enter accurate information. Fields marked with * are mandatory.</p>
+
+<form onsubmit="submitForm(event)">
+<fieldset>
+<legend>Personal Details</legend>
+<div class="grid">
+<div><label for="name">Full Name *</label><input id="name" name="name" type="text" required placeholder="Enter full name"></div>
+<div><label for="email">Email *</label><input id="email" name="email" type="email" required placeholder="student@example.com"></div>
+<div><label for="phone">Mobile Number *</label><input id="phone" name="phone" type="tel" pattern="[0-9]{10}" required placeholder="10-digit number"></div>
+<div><label for="dob">Date of Birth *</label><input id="dob" name="dob" type="date" required></div>
+<div><label for="password">Create Password *</label><input id="password" type="password" required minlength="6"></div>
+<div><label for="photo">Student Photo</label><input id="photo" type="file" accept="image/*"></div>
+</div>
+<p><b>Gender:</b></p>
+<div class="inline">
+<label><input type="radio" name="gender" value="male" required> Male</label>
+<label><input type="radio" name="gender" value="female"> Female</label>
+<label><input type="radio" name="gender" value="other"> Other</label>
+</div>
+</fieldset>
+
+<fieldset>
+<legend>Academic Details</legend>
+<div class="grid">
+<div><label for="course">Course *</label>
+<select id="course" required><option value="">Select course</option><option>B.Tech Computer Science</option><option>B.Tech IT</option><option>BCA</option><option>B.Sc Computer Science</option></select></div>
+<div><label for="year">Admission Year</label><input id="year" type="number" min="2026" max="2030" value="2026"></div>
+<div><label for="marks">Previous Percentage</label><input id="marks" type="number" min="0" max="100" step="0.01"></div>
+<div><label for="website">Portfolio / Website</label><input id="website" type="url" placeholder="https://example.com"></div>
+</div>
+</fieldset>
+
+<fieldset>
+<legend>Address</legend>
+<label for="address">Communication Address *</label>
+<textarea id="address" rows="4" required placeholder="Enter your complete address"></textarea>
+</fieldset>
+
+<fieldset>
+<legend>Media Elements</legend>
+<div class="media">
+<div>
+<h3>Institution Logo</h3>
+<img src="assets/campus-logo.svg" alt="Institution logo">
+</div>
+<div>
+<h3>Welcome Video</h3>
+<video controls width="100%" poster="assets/campus-logo.svg">
+<source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" type="video/mp4">
+Your browser does not support video playback.
+</video>
+<h3>Welcome Audio</h3>
+<audio controls>
+<source src="assets/welcome.wav" type="audio/wav">
+Your browser does not support audio playback.
+</audio>
+</div>
+</div>
+</fieldset>
+
+<label><input type="checkbox" required> I confirm that the information provided is correct.</label><br><br>
+<button type="submit">Submit Application</button>
+</form>
+</main>
+
+<script>
+function submitForm(event){
+  event.preventDefault();
+  alert("Admission form submitted successfully!");
+}
+</script>
+</body>
+</html>

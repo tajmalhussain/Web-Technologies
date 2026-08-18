@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="300" viewBox="0 0 900 300">
+<rect width="900" height="300" rx="30" fill="#e9f4ff"/>
+<circle cx="150" cy="150" r="90" fill="#2f80ed"/>
+<path d="M75 150h150M150 60c-45 50-45 130 0 180M150 60c45 50 45 130 0 180M85 105h130M85 195h130" fill="none" stroke="white" stroke-width="10"/>
+<text x="290" y="135" font-family="Arial" font-size="58" font-weight="700" fill="#17324d">CampusConnect</text>
+<text x="292" y="190" font-family="Arial" font-size="28" fill="#4d6b82">Student Admission Portal</text>
+</svg>
